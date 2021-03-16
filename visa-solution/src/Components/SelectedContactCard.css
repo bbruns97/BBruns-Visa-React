@@ -1,0 +1,55 @@
+.sel-card-wrapper {
+  margin: 20px 0;
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  width: max-content;
+  padding: 15px 5px;
+  box-shadow: 0 0 5px lightgray;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.card-full-name {
+  font-size: 30px;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
+.card-number {
+  font-size: 20px;
+  font-weight: lighter;
+  color: gray;
+}
+
+.card-email {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(253, 2, 78);
+}
+
+.card-btn {
+  outline: none;
+  padding: 10px 20px;
+  border: 1px solid rgb(253, 2, 78);
+  color: rgb(253, 2, 78);
+  font-weight: lighter;
+  border-radius: 5px;
+  transition: 0.2s;
+  background-color: white;
+}
+
+.card-btn:hover {
+  color: white;
+  background-color: rgb(253, 2, 78);
+}
+
+.edit-btn {
+  border: 1px solid rgb(26, 89, 236);
+  color: rgb(26, 89, 236);
+}
+
+.edit-btn:hover {
+  color: white;
+  background-color: rgb(26, 89, 236);
+}
