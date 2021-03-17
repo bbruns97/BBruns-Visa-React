@@ -2,14 +2,14 @@
 
  Solution to Visa interview code project.
 
-# Dependencies
+## Dependencies
 
 1. react-bootstrap
 2. react-router-dom
 3. react
 4. @material-ui/core
 
-# Instructions
+## Instructions
 
 1. cd into visa-solution
 2. command line: "npm install"
