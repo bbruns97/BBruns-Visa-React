@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Error404 from "./404";
 import "./App.css";
 import AddContactPage from "./Components/AddContactPage";
