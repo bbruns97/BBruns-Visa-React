@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SelectedContactCard.css";
 import { Col, Row, Container } from "react-bootstrap";
+import Icon from "@material-ui/core/Icon";
 
 function SelectedContactCard(props) {
   function deleteSelectedContact() {
@@ -24,18 +25,21 @@ function SelectedContactCard(props) {
       }
       index++;
     });
-    alert(result);
     return result;
   }
   return (
     <div className="sel-card-wrapper">
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
       <Container fluid>
         <Row>
           <Col xl={12} lg={12} sm={12} xs={12}>
             <img
               src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
               alt="Default image."
-              style={{ borderRadius: "50%" }}
+              style={{ borderRadius: "50%", width: "100%" }}
             />
           </Col>
         </Row>
@@ -47,25 +51,31 @@ function SelectedContactCard(props) {
           </Col>
         </Row>
         <Row>
-          <Col xl={6} lg={6} sm={6} xs={6}>
-            <p className="card-number">{props.sel.phoneNumber}</p>
-          </Col>
-          <Col xl={6} lg={6} sm={6} xs={6}>
-            <p className="card-email">{props.sel.emailAddress}</p>
+          <Col xl={12} lg={12} sm={12} xs={12}>
+            <p className="card-number">
+              <Icon style={{ verticalAlign: "-5px" }}>call</Icon>{" "}
+              {props.sel.phoneNumber}
+            </p>
           </Col>
         </Row>
         <Row>
-          <Col xl={6} lg={6} sm={6} xs={6}>
+          <Col xl={12} lg={12} sm={12} xs={12}>
+            <p className="card-email">
+              <Icon style={{ verticalAlign: "-5px" }}>email</Icon>{" "}
+              {props.sel.emailAddress}
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col xl={12} lg={12} sm={12} xs={12}>
             <Link
               to={{
-                pathname: "/email/" + props.sel.emailAddress,
+                pathname: "/edit/" + props.sel.emailAddress,
                 state: { editableContact: props.sel },
               }}
             >
               <button className="card-btn edit-btn">Edit</button>
             </Link>
-          </Col>
-          <Col xl={6} lg={6} sm={6} xs={6}>
             <button className="card-btn" onClick={deleteSelectedContact}>
               Delete
             </button>

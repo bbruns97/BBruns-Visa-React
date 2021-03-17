@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Error404 from "./404";
 import "./App.css";
 import AddContactPage from "./Components/AddContactPage";
 import ContactsPage from "./Components/ContactsPage";
@@ -8,9 +9,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/email/:email" component={EditContactPage} />
+        <Route path="/edit/:email" component={EditContactPage} />
         <Route path="/add" component={AddContactPage} />
         <Route exact path="/" component={ContactsPage} />
+        <Route component={Error404} />
       </Switch>
     </Router>
   );

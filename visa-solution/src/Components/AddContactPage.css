@@ -1,0 +1,16 @@
+.add-contact-wrapper {
+  width: 500px;
+  height: auto;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(218, 218, 218);
+}
+
+@media (max-width: 600px) {
+  .add-contact-wrapper {
+    width: 100%;
+    padding: 40px;
+    border-radius: 0;
+  }
+}

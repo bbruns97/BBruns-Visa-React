@@ -4,3 +4,12 @@
     background-color: rgb(241, 241, 241);
     overflow-y: scroll;
 }
+
+.add-cont-btn {
+    outline: none;
+    border: 1px solid rgb(253, 2, 78);
+    color: white;
+    background-color: rgb(253, 2, 78);
+    padding: 15px 5px;
+    width: 100%;
+}
